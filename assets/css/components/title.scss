@@ -1,0 +1,53 @@
+.title {
+    text-align: center;
+    font-family: $lato;
+    h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        color: $title;
+    }
+    .dilivery {
+        width: 100px;
+        overflow: hidden;
+        margin: 0 auto;
+        .line {
+            background-image: url('../img/title/divider.png');
+            width: 500%;
+            overflow: hidden;
+            height: 10px;
+            overflow: hidden;
+            background-repeat: repeat-x;
+            animation: chay 5s linear infinite;
+        }
+    }
+}
+
+.title--white {
+    h1 {
+        color: white;
+    }
+    .line {
+        background-image: url('../img/divider-white.png') !important;
+    }
+}
+
+.title--left {
+    text-align: left;
+    .dilivery {
+        width: 100px;
+        overflow: hidden;
+        margin: unset;
+    }
+}
+
+@include keyframes (chay) {
+    from {
+        transform: translateX(-20%);
+    }
+    // 50%{
+    //     transform: translateX(0);
+    // }
+    to {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,39 @@
+.btn{
+    outline: none;
+    border:none;
+    background: none;
+    color: white;
+}
+
+.btn--default{
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 0 0 1px white;
+    &:hover{
+        background-color: $yellow;
+        color: black;
+        box-shadow:unset;
+    }
+}
+
+.btn--green{
+    background-color: green;
+    color: white;
+  
+}
+
+.btn--pink{
+    background-color: $pink;
+}
+.btn--red{
+    background-color: #E21C3F;
+}
+.btn--yellow{
+    background-color: #FFB836;
+    color:black;
+    &:hover{
+        background-color: transparent;
+        color: white;
+        box-shadow: 0 0 0 1px white;
+    }
+}

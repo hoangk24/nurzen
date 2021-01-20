@@ -1,0 +1,83 @@
+.gallery{
+    font-family: $lato;
+    &__title{
+        margin-bottom: 4rem;
+    }
+    &__content{
+        
+        &-button{
+            margin-bottom: 2rem;
+            display: flex;
+                justify-content: center;
+                align-items: center;
+                    flex-wrap: wrap;
+            .button-filter{
+           
+               
+                cursor: pointer;
+                margin: 1rem;
+                font-weight: 500;
+                padding: 1rem 2rem;
+                font-size: 2rem;
+                box-shadow: 0 0 2px -1px black;
+                border-radius: 2rem;
+                background-color: #FAFAFA;
+                &:hover{
+                    background-color: $green;
+                    color:white
+                }
+            }
+            .button--active{
+                background-color: $green;
+                color:white
+            }
+        }
+        &-filter{
+            
+            .filter-img{
+                padding: 1rem;
+              
+                &__body{
+                    cursor: pointer;
+                  overflow: hidden;
+                    box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.5);
+                    padding: 2%;
+                   position: relative;
+                   .overlay{
+                       transition: .4s;
+                        content: '';
+                    opacity: 0;
+                        position: absolute;
+                        top: 50%; 
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 97%;
+                        height: 97%;
+                        background-color: #19aa5fee;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                       
+                        i{  
+                        color: #19aa5fee;
+                            font-size: 4rem;
+                            padding: 1rem 1.2rem;
+                            background-color: white;
+                            border-radius: 50%;
+                        }
+                    }
+                    &:hover{
+                        .overlay{
+                            opacity: 1;
+                        }
+                    }
+                    img{
+                      
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

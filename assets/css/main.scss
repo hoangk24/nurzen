@@ -1,0 +1,23 @@
+@import './abstracts/common.scss';
+// Base
+@import './base/reset.scss',
+'./base/variables.scss';
+// components
+@import './components/form.scss',
+'./components/title.scss';
+// Layout
+@import './layout/footer.scss',
+'./layout/header.scss';
+// page
+@import './pages/home/banner.scss',
+'./pages/home/services.scss',
+'./pages/home/about.scss',
+'./pages/home/event.scss',
+'./pages/home/hightlight.scss',
+'./pages/home/gallery.scss',
+'./pages/home/classes.scss',
+'./pages/home/teacher.scss',
+'./pages/home/pringcing.scss',
+'./pages/home/collection.scss',
+'./pages/home/say.scss',
+'./pages/home/post.scss';

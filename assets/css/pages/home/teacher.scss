@@ -1,0 +1,94 @@
+.teacher {
+    overflow: hidden;
+    padding-bottom: 50rem;
+    position: relative;
+    background-image: url(../img/banner/bg-pattern.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+        width: 100%;
+        background-color: #5B72F9;
+        opacity: .92;
+    }
+    &__animation {
+        .track {
+            z-index: 2;
+            position: relative;
+        }
+        .bus {
+            position: absolute;
+            z-index: 99;
+            top: 0;
+            right: 20%;
+            transform: rotate(-20deg);
+            animation: bus 15s linear infinite;
+        }
+        @include breakpoint(992) {
+            display: none;
+        }
+    }
+}
+
+@include keyframes(bus) {
+    0% {
+        transform: translate(0, 0) rotate(-10deg);
+    }
+    20% {
+        transform: translate(-200px, 50px) rotate(-10deg);
+    }
+    40% {
+        transform: translate(-400px, 50px) rotate(15deg);
+    }
+    60% {
+        transform: translate(-600px, 50px) rotate(20deg);
+    }
+    80% {
+        transform: translate(-700, 40px) rotate(10deg);
+    }
+    100% {
+        transform: translate(-1000px, -100px) rotate(20deg);
+    }
+}
+
+.teacher__wrapper {
+    z-index: 2;
+    margin-top: -300px;
+    position: relative;
+    font-family: $lato;
+    text-align: center;
+    &-title {
+        margin-bottom: 2rem;
+    }
+    .teacher__content {
+        .list-teacher {
+            &__card {
+                padding: 1rem;
+                .card__body {
+                    .card-logo {
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                    .card-info {
+                        h1 {
+                            font-size: 2rem;
+                            font-weight: 600;
+                        }
+                        span {
+                            color: $content;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

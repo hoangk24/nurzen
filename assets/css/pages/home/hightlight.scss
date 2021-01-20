@@ -1,0 +1,33 @@
+.hightlight{
+    padding: 4rem;
+    text-align: center;
+    font-family: $lato;
+    &__title{
+        margin-bottom: 4rem;
+    }
+    &__content{
+        .card{
+            &__body{
+                cursor: pointer;
+                transition: .3s;
+                border-radius: 2rem;
+                box-shadow: 3px 3px 15px rgba(0,0,0,.1);
+                padding: 3.5rem 4rem;
+                margin: 10px;
+                h5{
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                    color: $content;
+                    line-height: 2rem;
+                }
+                &:hover{
+                    box-shadow: 3px 3px 17px rgba(0, 0, 0, 0.158);
+                }
+            }
+           
+        }
+    }
+}

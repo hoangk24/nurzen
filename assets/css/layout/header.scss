@@ -1,0 +1,146 @@
+.warpper {
+  position: relative;
+}
+.header {
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  font-family: $lato;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+  @include breakpoint(992) {
+    background-color: $green;
+  }
+  &__logo {
+    img {
+      display: block;
+    }
+    @include breakpoint(992) {
+      flex: 1;
+    }
+  }
+  
+  &__menu {
+    
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .list-items {
+      padding: 1rem;
+      a {
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+
+    @include breakpoint(992) {
+      max-height: 0vh;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      background-color: $green;
+      width: 100%;
+      align-items: flex-start;
+      transition: 1s;
+      .list-items {
+        width: 100%;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+  .menu--active {
+    max-height: 100vh;
+  }
+  &__search {
+
+    position: relative;
+    @include breakpoint(992) {
+      flex: 0;
+    }
+    &-button {
+      button {
+        i {
+          color: white;
+          font-size: 2rem;
+        }
+      }
+    }
+    
+    &-form{
+      transition: .4s;
+      overflow: hidden;
+      max-height: 0;
+      background-color: white;
+      display: flex;
+      position: absolute;
+      top: 200%;
+      right: 0;
+     
+      input{
+        padding: 1rem;
+        font-size: 2rem;
+        outline: none;
+        border: none;
+        border: 1px solid $gray;
+        &::placeholder{
+          font-size: 1.5rem;
+        }
+      }
+      button{
+        padding: 2rem;
+        &:hover{
+          background-color: rgb(27, 190, 27);
+        }
+      }
+    }
+  }
+  .search--active{
+    max-height: 100vh;
+    padding: 1rem;
+  }
+
+  &__bars {
+    padding: 0 1rem;
+    @include breakpoint(992) {
+      flex: 0;
+      display: unset;
+    }
+    display: none;
+    cursor: pointer;
+    div {
+      margin: 3px;
+      width: 2.7rem;
+      height: 2.5px;
+      background-color: $yellow;
+    }
+  }
+}
+
+.header--active {
+  background-color: $green;
+  animation: headerscroll 0.3s;
+  position: fixed;
+ 
+}
+
+@include keyframes(headerscroll) {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 0;
+  }
+}

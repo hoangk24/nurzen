@@ -1,0 +1,107 @@
+.say {
+    padding: 4rem 0;
+    position: relative;
+    font-family: $lato;
+    &__animation {
+        @include breakpoint(992) {
+            display: none;
+        }
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation: lenxuong 3s infinite linear;
+    }
+    &__title {
+        margin-bottom: 3rem;
+    }
+    &__content {
+        &-wrapper {
+            align-items: center;
+            justify-content: center;
+            .left {
+                margin: 1rem 0;
+                position: relative;
+                .child {
+                    position: absolute;
+                    animation: tonho 2s linear infinite;
+                }
+                .big {
+                    object-fit: cover;
+                    width: 80%;
+                }
+                .item1 {
+                    top: 0;
+                    right: 10%;
+                    animation-delay: .9s;
+                }
+                .item2 {
+                    top: 30%;
+                    right: 5%;
+                    animation-delay: .3s;
+                }
+                .item3 {
+                    top: 50%;
+                    right: 8%;
+                }
+                @include breakpoint(575) {
+                    .item1 {
+                        width: 15%;
+                    }
+                    .item2 {
+                        width: 15%;
+                    }
+                    .item3 {
+                        width: 15%;
+                    }
+                }
+            }
+            .right {
+                margin-top: 3rem;
+                .item {
+                    &-text {
+                        font-size: 2rem;
+                        color: $content;
+                        margin-bottom: 1rem;
+                    }
+                    &-sign {
+                        margin: 2rem 0;
+                        width: 30%;
+                        display: block;
+                    }
+                    &-writter {
+                        font-size: 3rem;
+                        font-weight: 600;
+                    }
+                    &-bussiness {
+                        font-size: 1.6rem;
+                        color: $content;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include keyframes(tonho) {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@include keyframes(lenxuong) {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-20%)
+    }
+    100% {
+        transform: translateY(0%)
+    }
+}

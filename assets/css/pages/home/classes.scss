@@ -1,0 +1,74 @@
+.classes {
+  font-family: $lato;
+  padding: 4rem 0;
+  &__title {
+    margin-bottom: 4rem;
+  }
+  &__content {
+    .card__content-list {
+      .card {
+          margin: 1rem 0;
+        &__body {
+            cursor: pointer;
+            box-shadow: 0 7px 7px rgba(0,0,0,.1);
+          border-radius: 1rem;
+          overflow: hidden;
+          position: relative;
+
+          &-percent {
+            position: absolute;
+            color: white;
+            width: 5rem;
+            font-size: 2rem;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 5%;
+            left: 5%;
+            border-radius: 50%;
+            background-color: $green;
+            z-index: 1;
+          }
+          &-img {
+            overflow: hidden;
+            img {
+                z-index: 1;
+              transition: 0.3s;
+              display: block;
+              width: 100%;
+            }
+          }
+          &:hover {
+            .card__body-img {
+              img {
+                transform: scale(1.1) rotate(5deg);
+              }
+            }
+          }
+          &-content {
+            padding: 2rem;
+            h2 {
+              font-size: 2rem;
+              font-weight: 600;
+              margin-bottom: 1rem;
+              &:hover {
+                color: $yellow;
+              }
+            }
+            .description {
+              &__column {
+                border-right: 1px solid $content;
+                font-size: 1.5rem;
+                color: $content;
+                &:last-child {
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

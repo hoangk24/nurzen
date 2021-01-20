@@ -1,0 +1,55 @@
+.princing {
+    text-align: center;
+    padding: 4rem 0;
+    font-family: $lato;
+    &__title {
+        margin-bottom: 2rem;
+    }
+    &__content {
+        &-list {
+            .list-items {
+                margin: 1rem 0;
+                .card__body {
+                    padding: 4rem 1rem;
+                    box-shadow: 0 3px 25px rgba(0, 0, 0, .1);
+                    .card-circle {
+                        display: inline-block;
+                        width: 10rem;
+                        margin: 0 auto;
+                        height: 10rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $yellow;
+                        text-align: center;
+                        font-size: 2rem;
+                        color: white;
+                        border-radius: 50%;
+                    }
+                    .card-title {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        padding: 1rem 0;
+                    }
+                    .card__list {
+                        .info {
+                            font-size: 1.5rem;
+                            color: $content;
+                            line-height: 2.5rem;
+                        }
+                        padding: 2rem 0;
+                    }
+                    .card-button {
+                        button {
+                            background-color: $yellow;
+                            padding: 1rem 2rem;
+                            font-size: 2rem;
+                            color: white;
+                            border-radius: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

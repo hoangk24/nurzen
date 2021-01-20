@@ -1,0 +1,58 @@
+.about {
+    padding: 4rem 0;
+    font-family: $lato;
+  &__content {
+    justify-content: center;
+    align-items: center;
+    &-info {
+        .info-title{
+        margin-bottom: 2rem;
+    }
+      .info-text{
+          font-size: 16px;
+          color: $content;
+      }
+      .info-list{
+          li{
+              padding: 1rem 0;
+              font-size: 16px;
+              color:$content;
+          }
+      }
+    }
+  }
+  &__img{
+      img{
+          display: block;
+          width: 100%;
+      }
+  }
+  &__animation{
+      overflow: hidden;
+  margin-top: 2rem;
+      .snail{
+          position: relative;
+          display: block;
+            left: 0;
+            animation: bo 15s linear infinite;
+        
+      }
+  }
+}
+
+
+@include keyframes(bo){
+   0%{
+       left: 0;
+       opacity: 1;
+   }
+   80%{
+       left: 80%;
+       opacity: 1;
+   }
+   100%{
+       left: 100%;
+       opacity: 0;
+   }
+   
+}

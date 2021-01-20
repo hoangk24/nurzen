@@ -1,0 +1,111 @@
+.post {
+    font-family: $lato;
+    padding: 4rem 0;
+    &__title {
+        margin-bottom: 4rem;
+    }
+    &__content {
+        .card {
+            margin-bottom: 4rem;
+            &__body {
+                box-shadow: 0 9px 30px rgba(164, 164, 164, .1);
+                padding: 1rem;
+            }
+            &-img {
+                position: relative;
+                img {
+                    display: block;
+                    width: 100%;
+                    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                }
+                .month {
+                    position: absolute;
+                    text-align: center;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    background: $red;
+                    padding: 1rem 1.2rem;
+                    color: white;
+                    bottom: 3%;
+                    right: 10%;
+                    border-radius: 1rem;
+                }
+            }
+            &-title {
+                padding: 1rem 0;
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+            &-text {
+                padding: 1rem 0;
+                color: $content;
+                font-size: 1.5rem;
+            }
+            &__content {
+                padding: 0 1rem;
+            }
+            &-button {
+                cursor: pointer;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                height: 5rem;
+                width: 5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                box-shadow: 0 0 0 1px black;
+                button {
+                    i {
+                        color: black;
+                        font-weight: 700;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        .card:nth-child(1) {
+            .card-button {
+                box-shadow: 0 0 0 1px $red;
+                i {
+                    color: $red;
+                }
+                &:hover {
+                    background-color: $red;
+                    i {
+                        color: white;
+                    }
+                }
+            }
+        }
+        .card:nth-child(2) {
+            .card-button {
+                box-shadow: 0 0 0 1px $green;
+                i {
+                    color: $green;
+                }
+                &:hover {
+                    background-color: $green;
+                    i {
+                        color: white;
+                    }
+                }
+            }
+        }
+        .card:nth-child(3) {
+            .card-button {
+                box-shadow: 0 0 0 1px $yellow;
+                i {
+                    color: $yellow;
+                }
+                &:hover {
+                    background-color: $yellow;
+                    i {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

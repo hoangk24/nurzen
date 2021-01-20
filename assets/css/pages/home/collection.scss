@@ -1,0 +1,133 @@
+.collection {
+    padding: 2rem 0;
+    font-family: $lato;
+    &__title {
+        margin-bottom: 2rem;
+    }
+    &__content {
+        &-list {
+            .card {
+                margin: 1rem 0;
+                &__body {
+                    overflow: hidden;
+                    position: relative;
+                    box-shadow: 0 0 17px rgba(0, 0, 0, .07);
+                    &:hover {
+                        .card-tool {
+                            left: 80%;
+                        }
+                        .card-img {
+                            img {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+                &-tool {
+                    position: absolute;
+                    left: 100%;
+                    transition: .4s;
+                    .list-items {
+                        &:hover {
+                            &:nth-child(1) {
+                                background-color: $red;
+                            }
+                            &:nth-child(2) {
+                                background-color: $yellow;
+                            }
+                            &:nth-child(3) {
+                                background-color: $green;
+                            }
+                            i {
+                                color: white !important;
+                            }
+                        }
+                        cursor: pointer;
+                        width: 3rem;
+                        height: 3rem;
+                        margin: 1rem;
+                        border: 1px solid black;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: transparent;
+                        &:nth-child(1) {
+                            border: 1px solid $red;
+                            i {
+                                color: $red;
+                            }
+                        }
+                        &:nth-child(2) {
+                            border: 1px solid $yellow;
+                            i {
+                                color: $yellow;
+                            }
+                        }
+                        &:nth-child(3) {
+                            border: 1px solid $green;
+                            i {
+                                color: $green;
+                            }
+                        }
+                        i {
+                            padding: .3rem;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                .card-img {
+                    overflow: hidden;
+                    height: 300px;
+                    background-color: #F1EFFF;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        display: block;
+                        transition: .4s;
+                    }
+                }
+                .card-evaluate {
+                    display: flex;
+                    align-items: center;
+                    margin: 1rem;
+                    i {
+                        font-size: 1.4rem;
+                        color: $yellow;
+                    }
+                    span {
+                        margin: 0 1rem;
+                        font-size: 2rem;
+                        color: $content;
+                    }
+                }
+                .card-title {
+                    margin: 1rem;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: black;
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+                .card-price {
+                    margin: 1rem;
+                    color: $green;
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                    .discount {
+                        color: $content;
+                        text-decoration: line-through;
+                    }
+                    .off {
+                        color: $yellow;
+                    }
+                }
+                .card-info {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
