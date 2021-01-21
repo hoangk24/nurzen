@@ -6,16 +6,17 @@ $green:#19AA5F;
 $yellow:#FFB836;
 $blue:#5B72F9;
 $gray:#E6E6E6;
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-$lato: 'Lato', sans-serif;
-
-.red{
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&display=swap');
+$lato: 'Baloo 2',
+cursive;
+.red {
     color: $red;
 }
-.blue{
+
+.blue {
     color: $blue;
 }
-.green{
-    color:$green;
+
+.green {
+    color: $green;
 }

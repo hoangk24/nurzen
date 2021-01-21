@@ -1,29 +1,32 @@
-.services{
+.services {
+    padding-bottom: 4rem;
+    @include breakpoint(992) {
+        padding-bottom: unset;
+    }
     text-align: center;
     font-family: $lato;
-    &__title{
+    &__title {
         padding: 3rem 0;
     }
-    .card{
-        @include breakpoint(768){
+    .card {
+        @include breakpoint(768) {
             margin-bottom: 2rem;
         }
-        &-body{
+        &-body {
             padding: 1rem;
             position: relative;
-            &:hover{
-                .card-logo{
-                    &::after{
-                    //    animation:hover 1s ease-in;
+            &:hover {
+                .card-logo {
+                    &::after {
+                        //    animation:hover 1s ease-in;
                     }
                 }
             }
-          
         }
-        &-logo{
-            &::after{
+        &-logo {
+            &::after {
                 transition: 1s;
-                content:'';
+                content: '';
                 position: absolute;
                 border-radius: 100%;
                 background-color: rgba(255, 255, 255, 0.589);
@@ -31,7 +34,6 @@
                 transform: translateX(-50%);
                 height: 50px;
                 width: 50px;
-              
             }
             overflow: hidden;
             display: inline-block;
@@ -39,28 +41,25 @@
             font-size: 4rem;
             color: white;
             border-radius: 69% 31% 42% 58%/43% 32% 68% 57%;
-            &:nth-child(1){
+            &:nth-child(1) {
                 background-color: $red;
             }
-            &:nth-child(2){
+            &:nth-child(2) {
                 background-color: $yellow;
             }
-            &:nth-child(3){
+            &:nth-child(3) {
                 background-color: $pink;
             }
-           
         }
-        &-title{
+        &-title {
             margin: 1rem 0;
             font-size: 2rem;
-            color:$title;
+            color: $title;
             font-weight: 700;
-            
         }
-        &-text{
-            color:$content;
+        &-text {
+            color: $content;
             font-size: 1.6rem;
         }
     }
 }
-
