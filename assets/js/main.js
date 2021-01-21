@@ -1,7 +1,5 @@
 $(window).on('load', function(event) {
-
     $('.loading').removeClass('loadding--active');
-    $('.loading').delay(1000).fadeOut('fast');
     new WOW().init();
     var Click = {
         Toggle: function(button, thing, excThing) {
